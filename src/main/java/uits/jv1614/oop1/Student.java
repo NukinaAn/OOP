@@ -1,7 +1,5 @@
 package uits.jv1614.oop;
 
-
-
 public class Student {
    private int id;
    private String SurName;
