@@ -22,35 +22,38 @@ public class Student {
    
     
    public Student() throws ParseException{
-      SimpleDateFormat dateformat3 = new SimpleDateFormat("dd/MM/yyyy");
-        id = 1;        
+      id = 1;        
       Name = "Василий"; 
       SurName = "Васильев";
-     MiddleName = "Васильевич";
-      Date date1 = dateformat3.parse("27/09/1993");
-     // System.out.println("birthday: "+ dateformat3.format(date1));
-    adress = "Барабашова 32" ;
-       number = 3369012;
-       Faculty = 3;
-        course = 3;
+      MiddleName = "Васильевич";
+      adress = "Барабашова 32" ;
+      number = 3369012;
+      Faculty = 3;
+      course = 3;
       Group = 334;
     }
 
     public Student(int id){
         
-         
-      Name = "Василий"; 
-        SurName = "Васильев";
-       MiddleName = "Васильевич";
-    
-        adress = "Барабашова 32" ;
-       number = 3369012;
-      Faculty = 3;
-      course = 3;
-       Group = 334;
-        
-        
+      this.Name = "Петр"; 
+      this.SurName = "Петренко";
+      this.MiddleName = "Петрович";
+      this.adress = "Героев Труда 88" ;
+      this.number = 3365249;
+      this.Faculty = 3;
+      this.course = 3;
+      this.Group = 334;
+       
     }
-
     
+    public Student(int id, int number){
+        
+      this.Name = "Олег"; 
+      this.SurName = "Дурнев";
+      this.MiddleName = "Анатольевич";
+      this.adress = "Блюхера 21" ;
+      this.Faculty = 4;
+      this.course = 2;
+      this.Group = 425;
+     }
 }
