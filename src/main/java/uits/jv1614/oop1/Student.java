@@ -1,11 +1,15 @@
 package uits.jv1614.oop;
 
+import java.util.Date;
+
+
+
 public class Student {
    private int id;
    private String SurName;
    private String Name;
    private String MiddleName;
-  // private Date birthday;
+   private Date birthday;
    private String address;
    private int number;
    private int Faculty;
@@ -13,18 +17,34 @@ public class Student {
    private int Group;
     
  
-    public Student(int id, String Name, String SurName, String MiddleName, String address, int number,int Faculty,int course, int Group) {
+    public Student(int id, String Name, String SurName, String MiddleName, Date birthday, String address, int number,int Faculty,int course, int Group) {
         this.id = id;
         this.Name = Name;
         this.SurName = SurName;
         this.MiddleName = MiddleName;
+        this.birthday = birthday;
         this.address = address;
         this.number = number;
         this.Faculty = Faculty;
         this.course = course;
-        this.Group = Group;     
+        this.Group = Group; 
+        
     }
-    public int getid() {
+    
+     public Student(){
+        this.id = 2;
+        this.Name = "Артур";
+        this.SurName = "Герасимов";
+        this.MiddleName = "Герасимович";
+        this.address = "Холодная гора 4";
+        this.number = 3326579;
+        this.Faculty = 4;
+        this.course = 4;
+        this.Group = 443;  
+         
+     }
+      
+     public int getid() {
         return id;
     }
  
@@ -53,6 +73,13 @@ public class Student {
  
     public void setMiddleName(String surname) {
         this.MiddleName = MiddleName;
+    }
+    public Date getbirthday() {
+        return birthday;
+    }
+ 
+    public void setbirthday(Data birthday) {
+       this.birthday = birthday;
     }
  
     public String getAddress() {
@@ -93,16 +120,19 @@ public class Student {
     
     @Override
     public String toString() {
-        return "Employee{" +
-                "id:'" + id + '\'' +
-                ", name='" + Name + '\'' +
-                ", surname='" + SurName + '\'' +
-                ", MiddleName='" + MiddleName + '\'' +
-                ", address='" + address + '\'' +
-                ", number='" + number + '\'' +
-                ", Faculty='" + Faculty + '\'' +
-                ", course='" + course + '\'' +
-                ", Group='" + Group + '\'' +
-                '}';
+        return  " id:'" + id + '\'' +
+                ", name: '" + Name + '\'' +
+                ", surname: '" + SurName + '\'' +
+                ", MiddleName: '" + MiddleName + '\'' +
+                ", birthday: '" + birthday + '\'' +
+                ", address: '" + address + '\'' +
+                ", number: '" + number + '\'' +
+                ", Faculty: '" + Faculty + '\'' +
+                ", course: '" + course + '\'' +
+                ", Group: '" + Group + '\'';
+                
     }
 }
+
+    
+
