@@ -1,15 +1,10 @@
 package uits.jv1614.oop;
 
-import java.util.Date;
-
-
-
 public class Student {
    private int id;
    private String SurName;
    private String Name;
    private String MiddleName;
-   private Date birthday;
    private String address;
    private int number;
    private int Faculty;
@@ -17,12 +12,12 @@ public class Student {
    private int Group;
     
  
-    public Student(int id, String Name, String SurName, String MiddleName, Date birthday, String address, int number,int Faculty,int course, int Group) {
+    public Student(int id, String Name, String SurName, String MiddleName,  String address, int number,int Faculty,int course, int Group) {
+        
         this.id = id;
         this.Name = Name;
         this.SurName = SurName;
         this.MiddleName = MiddleName;
-        this.birthday = birthday;
         this.address = address;
         this.number = number;
         this.Faculty = Faculty;
@@ -74,14 +69,7 @@ public class Student {
     public void setMiddleName(String surname) {
         this.MiddleName = MiddleName;
     }
-    public Date getbirthday() {
-        return birthday;
-    }
- 
-    public void setbirthday(Date birthday) {
-       this.birthday = birthday;
-    }
- 
+     
     public String getAddress() {
         return address;
     }
@@ -120,16 +108,15 @@ public class Student {
     
     @Override
     public String toString() {
-        return  " id:'" + id + '\'' +
-                ", name: '" + Name + '\'' +
-                ", surname: '" + SurName + '\'' +
-                ", MiddleName: '" + MiddleName + '\'' +
-                ", birthday: '" + birthday + '\'' +
-                ", address: '" + address + '\'' +
-                ", number: '" + number + '\'' +
-                ", Faculty: '" + Faculty + '\'' +
-                ", course: '" + course + '\'' +
-                ", Group: '" + Group + '\'';
+        return  " id: " + id + '\n' +
+                " name: " + Name + '\n' +
+                " surname: " + SurName + '\n' +
+                " MiddleName: " + MiddleName + '\n' +
+                " address: " + address + '\n' +
+                " number: " + number + '\n' +
+                " Faculty: " + Faculty + '\n' +
+                " course: " + course + '\n' +
+                " Group: " + Group + '\n';
                 
     }
 }
