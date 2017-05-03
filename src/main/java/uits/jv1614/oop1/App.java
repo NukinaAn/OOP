@@ -1,47 +1,26 @@
-package uits.jv1614.oop1;
+package uits.jv1614.oop;
 
-import java.text.ParseException;
-import java.text.SimpleDateFormat;
-import java.util.Date;
-
+import java.util.ArrayList;
+import java.util.List;
 
 public class App {
-    public static void main (String[] args) throws ParseException {
-        SimpleDateFormat dateformat3 = new SimpleDateFormat("dd/MM/yyyy");
-        Student stud = new Student();
-        System.out.println("id: " + stud.id);
-        String a;
-        a = stud.Name + " " + stud.SurName + " " + stud.MiddleName + "\n" + stud.adress;
-        System.out.println(a);
-        Date date1 = dateformat3.parse("27/09/1993");
-        System.out.println("birthday: "+ dateformat3.format(date1));
-        System.out.println("number: " + stud.number);
-        System.out.println("Faculty: " + stud.Faculty);
-        System.out.println("course: " + stud.course);
-        System.out.println("Group: " + stud.Group);
-                
-        Student stud2 = new Student(2);
-        System.out.println("id: " + stud2.id);
-        String b;
-        b = stud2.Name + " " + stud2.SurName + " " + stud2.MiddleName + "\n" + stud2.adress;
-        System.out.println(b);
-        Date date2 = dateformat3.parse("15/05/1993");
-        System.out.println("birthday: "+ dateformat3.format(date2));
-        System.out.println("number: " + stud2.number);
-        System.out.println("Faculty: " + stud2.Faculty);
-        System.out.println("course: " + stud2.course);
-        System.out.println("Group: " + stud2.Group);
-        
-        Student stud3 = new Student(3, 3352424);
-        System.out.println("id: " + stud2.id);
-        String c;
-        c = stud3.Name + " " + stud3.SurName + " " + stud3.MiddleName + "\n" + stud3.adress;
-        System.out.println(c);
-        Date date3 = dateformat3.parse("18/08/1992");
-        System.out.println("birthday: "+ dateformat3.format(date3));
-        System.out.println("number: " + stud3.number);
-        System.out.println("Faculty: " + stud3.Faculty);
-        System.out.println("course: " + stud3.course);
-        System.out.println("Group: " + stud3.Group);
-    }
-}
+     public static void main(String[] args) {
+         Student stud = new Student (1, "Петр" , "Петров", "Петрович", 2016-11-18, "Барабашова 32", 3356423, 4, 4, 443);
+            System.out.println(stud);
+          
+         Student stud1 = new Student();
+            System.out.println(stud1);
+         
+         Student stud3 = new Student (3, "Иван" , "Иванов", "Иванович", 1997-19-2, "Советская 67", 3364398, 3, 2, 323);
+            System.out.println(stud3);
+            
+         Student stud4 = new Student (4, "Евгений" , "Жмуркин", "Андреевич", 21/4/1997, "Герое Труда 7", 3367498, 3, 2, 323);
+            System.out.println(stud4);
+         
+         Student stud5 = new Student (5, "Николай" , "Кукушкин", "Адольфович", 16/3/1995, "Блюхера 13", 3364398, 6, 4, 645);
+            System.out.println(stud5);
+            
+         Student stud6 = new Student (6, "Василий" , "Мышкин", "Олегович", 8/7/1995, "Академика Павлова 9", 3364398, 6, 4, 645);
+            System.out.println(stud6);
+     }
+   }
