@@ -78,7 +78,7 @@ public class Student {
         return birthday;
     }
  
-    public void setbirthday(Data birthday) {
+    public void setbirthday(Date birthday) {
        this.birthday = birthday;
     }
  
