@@ -1,23 +1,32 @@
 package uits.jv1614.oop;
 
+import java.text.ParseException;
+import java.util.Date;
+
 public class Student {
    private int id;
    private String SurName;
    private String Name;
    private String MiddleName;
+   private Date birthday;
    private String address;
    private int number;
    private int Faculty;
    private int course;
    private int Group;
     
- 
-    public Student(int id, String Name, String SurName, String MiddleName,  String address, int number,int Faculty,int course, int Group) {
+    
+    public Student() {
+    
+    }
+         
+public Student(int id, String Name, String SurName, String MiddleName, Date birthday,  String address, int number,int Faculty,int course, int Group) throws ParseException {
         
         this.id = id;
         this.Name = Name;
         this.SurName = SurName;
         this.MiddleName = MiddleName;
+        this.birthday = birthday;
         this.address = address;
         this.number = number;
         this.Faculty = Faculty;
@@ -26,19 +35,6 @@ public class Student {
         
     }
     
-     public Student(){
-        this.id = 2;
-        this.Name = "Артур";
-        this.SurName = "Герасимов";
-        this.MiddleName = "Герасимович";
-        this.address = "Холодная гора 4";
-        this.number = 3326579;
-        this.Faculty = 4;
-        this.course = 4;
-        this.Group = 443;  
-         
-     }
-      
      public int getid() {
         return id;
     }
@@ -68,6 +64,13 @@ public class Student {
  
     public void setMiddleName(String surname) {
         this.MiddleName = MiddleName;
+    }
+     public Date getbirthday() {
+        return birthday;
+    }
+ 
+    public void setbirthday(Date birthday) {
+        this.birthday = new Date ( 1990,9,9);
     }
      
     public String getAddress() {
@@ -112,6 +115,7 @@ public class Student {
                 " name: " + Name + '\n' +
                 " surname: " + SurName + '\n' +
                 " MiddleName: " + MiddleName + '\n' +
+                " birthday: " + birthday + '\n' +
                 " address: " + address + '\n' +
                 " number: " + number + '\n' +
                 " Faculty: " + Faculty + '\n' +
@@ -119,7 +123,117 @@ public class Student {
                 " Group: " + Group + '\n';
                 
     }
-}
+  
+    public String Faculty() {
+        if ((this.Faculty())).equals(3)){
+       return  " id: " + id + '\n' +
+               " name: " + Name + '\n' +
+               " surname: " + SurName + '\n' +
+               " MiddleName: " + MiddleName + '\n' +
+               " birthday: " + birthday + '\n' +
+               " address: " + address + '\n' +
+               " number: " + number + '\n' +
+               " Faculty: " + Faculty + '\n' +
+               " course: " + course + '\n' +
+               " Group: " + Group + '\n';
+        }
+    }
 
+    //списки студентов для каждого факультета и курса
+    public String FacCourse() {
+        if (((this.getFaculty()).equals(4)) && (this.getcourse() == 4)) {
+             return  " id: " + id + '\n' +
+                " name: " + Name + '\n' +
+                " surname: " + SurName + '\n' +
+                " MiddleName: " + MiddleName + '\n' +
+                " birthday: " + birthday + '\n' +
+                " address: " + address + '\n' +
+                " number: " + number + '\n' +
+                " Faculty: " + Faculty + '\n' +
+                " course: " + course + '\n' +
+                " Group: " + Group + '\n';
+        } if (((this.getFaculty()).equals(6)) && (this.getcourse() == 4)) {
+            return  " id: " + id + '\n' +
+                " name: " + Name + '\n' +
+                " surname: " + SurName + '\n' +
+                " MiddleName: " + MiddleName + '\n' +
+                " birthday: " + birthday + '\n' +
+                " address: " + address + '\n' +
+                " number: " + number + '\n' +
+                " Faculty: " + Faculty + '\n' +
+                " course: " + course + '\n' +
+                " Group: " + Group + '\n';
+            
+        }if (((this.getFaculty()).equals(3)) && (this.getcourse() == 2)) {
+             return  " id: " + id + '\n' +
+                " name: " + Name + '\n' +
+                " surname: " + SurName + '\n' +
+                " MiddleName: " + MiddleName + '\n' +
+                " birthday: " + birthday + '\n' +
+                " address: " + address + '\n' +
+                " number: " + number + '\n' +
+                " Faculty: " + Faculty + '\n' +
+                " course: " + course + '\n' +
+                " Group: " + Group + '\n';
     
-
+        }
+       return null;
+    }
+    
+    //список студентов, родившихся после заданного года
+    public String date_birthday(Date p){
+    if ((this.getbirthday().getYear()) > (p.getYear())){
+     return  " id: " + id + '\n' +
+                " name: " + Name + '\n' +
+                " surname: " + SurName + '\n' +
+                " MiddleName: " + MiddleName + '\n' +
+                " birthday: " + birthday + '\n' +
+                " address: " + address + '\n' +
+                " number: " + number + '\n' +
+                " Faculty: " + Faculty + '\n' +
+                " course: " + course + '\n' +
+                " Group: " + Group + '\n';
+    }
+       return null;
+    }
+    
+    // список учебной группы 
+    public String Group(){
+        if (this.getGroup().equals(443)){
+     return  " id: " + id + '\n' +
+                " name: " + Name + '\n' +
+                " surname: " + SurName + '\n' +
+                " MiddleName: " + MiddleName + '\n' +
+                " birthday: " + birthday + '\n' +
+                " address: " + address + '\n' +
+                " number: " + number + '\n' +
+                " Faculty: " + Faculty + '\n' +
+                " course: " + course + '\n' +
+                " Group: " + Group + '\n';
+    
+    }if (this.getGroup().equals(323)){
+     return  " id: " + id + '\n' +
+                " name: " + Name + '\n' +
+                " surname: " + SurName + '\n' +
+                " MiddleName: " + MiddleName + '\n' +
+                " birthday: " + birthday + '\n' +
+                " address: " + address + '\n' +
+                " number: " + number + '\n' +
+                " Faculty: " + Faculty + '\n' +
+                " course: " + course + '\n' +
+                " Group: " + Group + '\n';
+    }if (this.getGroup().equals(645)){
+     return  " id: " + id + '\n' +
+                " name: " + Name + '\n' +
+                " surname: " + SurName + '\n' +
+                " MiddleName: " + MiddleName + '\n' +
+                " birthday: " + birthday + '\n' +
+                " address: " + address + '\n' +
+                " number: " + number + '\n' +
+                " Faculty: " + Faculty + '\n' +
+                " course: " + course + '\n' +
+                " Group: " + Group + '\n';
+    }
+       return null;
+    }
+}
